@@ -3,6 +3,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { RoughNotation } from 'react-rough-notation'
 import { TypeAnimation } from 'react-type-animation'
 import SocialIcon from '@/components/social-icons'
+import Link from '@/components/Link'
 
 export default function Home() {
   return (
@@ -39,9 +40,9 @@ export default function Home() {
               </p>
               <p className="mt-3 text-lg font-light">
                 Read more about me{' '}
-                <a href="/about" className="underline">
+                <Link href="/about" className="underline">
                   here
-                </a>
+                </Link>
                 .
               </p>
               <div className="flex space-x-4 mt-8">
