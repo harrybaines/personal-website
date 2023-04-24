@@ -5,7 +5,7 @@ import Header from './Header'
 
 const poppins = Poppins({
   weight: ['300', '400', '600', '700'],
-  subsets: ['latin']
+  subsets: ['latin'],
 })
 
 const LayoutWrapper = ({ children }) => {

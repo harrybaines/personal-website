@@ -18,7 +18,7 @@ The main research questions we formulated were as follows:
 2. Can we develop a model to forecast the likelihood of an update to a substance in the next 3 months?
 
 <figure>
- <img src="/static/images/blog/2021-10-18-horizon-scanning/models.png" width="90%" />
+  <img src="/static/images/blog/2021-10-18-horizon-scanning/models.png" width="90%" />
 </figure>
 
 ## Version 1: Machine Learning Methods
@@ -26,10 +26,10 @@ The main research questions we formulated were as follows:
 The original method used machine-learning-based methods to compute probabilities for all substances and regulations using classification techniques (XGBoost and MLP neural networks). Given the lack of data describing each update, feature extraction techniques were used to create new features for each update, such as the day, month, year, and days since the last update. We utilised a full data science pipeline to process and predict from the data:
 
 <figure>
- <img src="/static/images/blog/2021-10-18-horizon-scanning/pipeline.png" />
+  <img src="/static/images/blog/2021-10-18-horizon-scanning/pipeline.png" />
 </figure>
 
- After thorough testing, however, the output probabilities were found to be slightly inaccurate and difficult to validate, and given the black-box nature of the algorithms used, the probabilities were uninterpretable.
+After thorough testing, however, the output probabilities were found to be slightly inaccurate and difficult to validate, and given the black-box nature of the algorithms used, the probabilities were uninterpretable.
 
 ## Version 2: Poisson Point Process
 
@@ -74,11 +74,23 @@ This procedure was carried out on a daily basis, which created rolling update pr
 I implemented the procedure in Python and created a Streamlit application to visualise regulation and substance updates through a web browser. This was deployed to our internal server and connected to the live substance database to read regulatory update data from. An example of the output for chromium trioxide in the app is shown below:
 
 <figure>
- <img src="/static/images/blog/2021-10-18-horizon-scanning/substance_id_1_updates_62_annotated.png" alt="Horizon scanning app" />
+  <img
+    src="/static/images/blog/2021-10-18-horizon-scanning/substance_id_1_updates_62_annotated.png"
+    alt="Horizon scanning app"
+  />
 </figure>
 
 References:
 
-1. <a href="https://towardsdatascience.com/the-poisson-distribution-and-poisson-process-explained-4e2cb17d459" target="_blank">Useful blog post about Poisson distribution and Poisson process</a>
-2. <a href="https://medium.com/@ns2586/using-poisson-distribution-to-forecast-the-next-earthquake-38a4406ab71#:~:text=It%20is%20one%20prominent%20way,statistical%20distribution%20called%20Poisson%20Distribution.&text=It%20is%20a%20discrete%20probability,interval%20of%20time%20or%20space" target="_blank">Useful blog post, predicts next earthquake</a>
-
+1. <a
+     href="https://towardsdatascience.com/the-poisson-distribution-and-poisson-process-explained-4e2cb17d459"
+     target="_blank"
+   >
+     Useful blog post about Poisson distribution and Poisson process
+   </a>
+2. <a
+     href="https://medium.com/@ns2586/using-poisson-distribution-to-forecast-the-next-earthquake-38a4406ab71#:~:text=It%20is%20one%20prominent%20way,statistical%20distribution%20called%20Poisson%20Distribution.&text=It%20is%20a%20discrete%20probability,interval%20of%20time%20or%20space"
+     target="_blank"
+   >
+     Useful blog post, predicts next earthquake
+   </a>

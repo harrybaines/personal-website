@@ -6,7 +6,7 @@ draft: false
 summary: Example of a markdown file with code blocks and syntax highlighting
 ---
 
-Imagine you're on a game show. There are 3 doors, behind which are 2 goats and 1 car. To win, you must choose the door behind which the car can be found. 
+Imagine you're on a game show. There are 3 doors, behind which are 2 goats and 1 car. To win, you must choose the door behind which the car can be found.
 
 You select a door at random and the gameshow host removes one door with a goat behind it. The host gives you the option to stick with the door you chose or switch to the other door. Do you switch? Does it make a difference to your chances of winning the car if you do?
 
@@ -24,7 +24,7 @@ Let's say the car is behind door 1, with the 2 goats behind the other doors, and
 
 **Possibility 3**: Select door 3 (with a goat behind). The host opens the other door with the goat behind (door 2). You stick with door 3 (with the goat behind). You lose! 🐐
 
-We can see that if you stick with the door you chose, you lose in 2 of the scenarios out of a possible 3. This means your chances of winning are 1/3 (33%) and your chances of losing are 2/3 (66%). Try this when the car is behind door 2 or door 3 and you'll get the same results - you lose twice and win once when you stick! 
+We can see that if you stick with the door you chose, you lose in 2 of the scenarios out of a possible 3. This means your chances of winning are 1/3 (33%) and your chances of losing are 2/3 (66%). Try this when the car is behind door 2 or door 3 and you'll get the same results - you lose twice and win once when you stick!
 
 ## Switching to the other door
 
@@ -36,11 +36,12 @@ Let's say the car is behind door 1 and draw out all possibilities:
 
 **Possibility 3**: Select door 3 (with a goat behind). The host opens the other door with the goat behind. You switch from door 3 to door 1 (with the car behind). You win! 🏎️
 
-So if you select the door with the car behind and you switch to the other door, you lose one out of three times. But if you select a door with a goat behind and switch, you win two out of three times! 
+So if you select the door with the car behind and you switch to the other door, you lose one out of three times. But if you select a door with a goat behind and switch, you win two out of three times!
 
 If you select a door with a goat behind, the host has to remove the other goat (because the car can't be removed). So you switch from the goat to the car. As there are 2 doors with goats to select initially, this means selecting 1 of 2 doors with goats behind out of a total of 3 doors will lead to a winning position if you switch. Therefore if you switch, your chances of winning the car are 2/3 (66%) and 1/3 (33%) for selecting a goat. So switching increases your chances of selecting the car!
 
 ## Python Implementation
+
 I'll be using Python to code my solution. To begin with, let's import our dependencies:
 
 ```python
@@ -60,14 +61,14 @@ def monty_hall(games=100000, switching=True):
         chosen_door_ind = random.randint(0,2)
         car_ind = random.randint(0,2)
         doors[car_ind] = 1
-        
+
         if switching:
             del doors[chosen_door_ind]
             doors.remove(0)
             wins += doors[0] == 1
         else:
             wins += doors[chosen_door_ind] == 1
- 
+
     perc_won = (wins/games) * 100
     perc_lost = ((games-wins)/games) * 100
     print("-"*75)
@@ -113,7 +114,10 @@ plot_results(wins, losses, games, switching)
 This generates the following plot:
 
 <figure>
- <img src="/static/images/blog/2019-09-08-monty-hall/switching.png" alt="Results after 100,000 simulations" />
+  <img
+    src="/static/images/blog/2019-09-08-monty-hall/switching.png"
+    alt="Results after 100,000 simulations"
+  />
 </figure>
 
 This visualisation helps us confirm our hypothesis that with a large number of games, switching on each game on average results in a higher winning percentage than sticking with your original door!

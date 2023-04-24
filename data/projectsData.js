@@ -1,6 +1,3 @@
-
- 
-
 const projectsData = [
   {
     title: 'AI Avatar Generator',
@@ -9,7 +6,7 @@ const projectsData = [
     category: 'AI',
     imgSrc: '/static/images/projects/avatar.png',
     href: 'https://github.com/harrybaines/ai-avatar-generator',
-    highlight: true
+    highlight: true,
   },
   {
     title: 'YT Transcript Summariser',
@@ -17,7 +14,7 @@ const projectsData = [
     startDate: 'Apr 2023',
     category: 'AI',
     imgSrc: '/static/images/projects/yt.png',
-    highlight: true
+    highlight: true,
   },
   {
     title: 'Time Management System',
@@ -27,7 +24,7 @@ const projectsData = [
     category: 'Software',
     imgSrc: '/static/images/projects/tms-logo.png',
     href: 'https://www.ca-tms.com/',
-    highlight: true
+    highlight: true,
   },
   {
     title: 'FPL Scout Scraper',
@@ -35,7 +32,7 @@ const projectsData = [
     startDate: 'Feb 2023',
     category: 'Software',
     href: 'https://github.com/harrybaines/FPL-discord-bot',
-    highlight: false
+    highlight: false,
   },
   {
     title: 'Tic-Tac-Toe AI',
@@ -43,7 +40,7 @@ const projectsData = [
     startDate: 'June 2022',
     category: 'AI',
     href: 'https://ttt-ai-mcts.herokuapp.com/',
-    highlight: false
+    highlight: false,
   },
   {
     title: 'Smart Contract Management Application',
@@ -51,7 +48,7 @@ const projectsData = [
     startDate: 'Mar 2019',
     category: 'Software',
     href: 'https://github.com/harrybaines/CommitmentManager---FYP',
-    highlight: false
+    highlight: false,
   },
   {
     title: 'Quark',
@@ -59,7 +56,7 @@ const projectsData = [
     startDate: 'Mar 2019',
     category: 'Software',
     href: 'https://github.com/harrybaines/Quark',
-    highlight: false
+    highlight: false,
   },
 ]
 

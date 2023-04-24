@@ -45,7 +45,7 @@ export default function Home() {
                 </Link>
                 .
               </p>
-              <div className="flex space-x-4 mt-8">
+              <div className="mt-8 flex space-x-4">
                 <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={8} />
                 <SocialIcon kind="github" href={siteMetadata.github} size={8} />
                 <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={8} />
